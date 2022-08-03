@@ -123,6 +123,16 @@ public class Linklist{
             System.out.print("null");
         }
     }
+    public void count(){
+        int count = 0;
+        Node ptr;
+        ptr = head;
+        while(ptr!=null){
+            ptr = ptr.getNext();
+            count++;
+        }
+        System.out.println("The Size of Linked List is"+count);
+    }
 
     class Node{
         private int data;

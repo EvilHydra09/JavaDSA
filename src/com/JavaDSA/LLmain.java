@@ -20,42 +20,37 @@ public class LLmain {
             System.out.println("6.Delete The Element In the position");
             System.out.println("7.View List");
             System.out.println("8.Exit");
+            System.out.println("9.count List");
             System.out.println("Enter Your Choice");
 
             int choice = sc.nextInt();
-            switch (choice){
-                case 1:
+            switch (choice) {
+                case 1 -> {
                     val = sc.nextInt();
                     a.insertAtFirst(val);
-                    break;
-                case 2:
-                    val =sc.nextInt();
+                }
+                case 2 -> {
+                    val = sc.nextInt();
                     a.insertAtLast(val);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     System.out.println("Enter The Position");
                     pos = sc.nextInt();
                     System.out.println("Enter The Value");
                     val = sc.nextInt();
-                    a.insertAtPosi(val,pos);
-                    break;
-                case 4:
-                    a.deleteAtFirstt();
-                    break;
-                case 5:
-                    a.deleteAtLast();
-                    break;
-                case 6:
+                    a.insertAtPosi(val, pos);
+                }
+                case 4 -> a.deleteAtFirstt();
+                case 5 -> a.deleteAtLast();
+                case 6 -> {
                     System.out.println("Enter The Position");
-                    pos=sc.nextInt();
+                    pos = sc.nextInt();
                     a.deleteAtPos(pos);
-                    break;
-                case 7:
-                    a.viewList();
-                    break;
-                case 8:
-                    flag = false;
-                    break;
+                }
+                case 7 -> a.viewList();
+                case 8 -> flag = false;
+                case 9 -> a.count();
+                default -> System.out.println("Invalid Choice ");
             }
         }
     }
